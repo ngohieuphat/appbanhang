@@ -9,6 +9,7 @@ class DataBloc extends Bloc<DataEvent, DataState> {
   var api = [].obs;
   DataBloc(this.repo) : super(DataInitialState()) {
     on<DataEvent>((event, emit) async {
+      // su kien goi den 
       if (event is LoadDataEvent) {
         emit(DataLoadingState());
         var apiValue = (await Repo.getData())?.data!.products.results;

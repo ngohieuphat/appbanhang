@@ -2,7 +2,6 @@ import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:get/get.dart';
-
 import '../controller/controller.dart';
 
 class DetailPage extends StatelessWidget {
@@ -13,7 +12,7 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     String description = controller.groceryList[index].description;
     return Obx(() => Scaffold(
-          backgroundColor: Colors.lightBlueAccent.shade100,
+          backgroundColor: Color.fromARGB(235, 162, 173, 9),
           appBar: AppBar(
             title: const Text(
               "Product Details",
@@ -31,7 +30,7 @@ class DetailPage extends StatelessWidget {
               ),
             ),
             automaticallyImplyLeading: true,
-            backgroundColor: Colors.lightBlueAccent.shade100,
+            backgroundColor: Color.fromARGB(113, 87, 97, 5),
           ),
           body: Column(
             children: [
@@ -108,7 +107,7 @@ class DetailPage extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 20, right: 20),
                         child: Row(
                           children: [
-                            const Text("ব্র্যান্ড :",
+                            const Text("Brand :",
                                 style: TextStyle(
                                     fontFamily: 'HindSiliguri', fontSize: 14)),
                             Text(
@@ -176,7 +175,7 @@ class DetailPage extends StatelessWidget {
                                                     fontSize: 18,
                                                     color: Colors.red)),
                                             Text(
-                                                "৳"
+                                                "€"
                                                 '${controller.groceryList[index].charge.sellingPrice.toString()}',
                                                 style: const TextStyle(
                                                     color: Colors.red,
@@ -195,7 +194,7 @@ class DetailPage extends StatelessWidget {
                                                     fontWeight: FontWeight.bold,
                                                     fontSize: 16)),
                                             Text(
-                                              "৳"
+                                              "€"
                                               '${controller.groceryList[index].charge.currentCharge.toString()}',
                                               style: const TextStyle(
                                                   fontWeight: FontWeight.bold,

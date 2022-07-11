@@ -82,6 +82,7 @@ flutter:
   # example:
   fonts:
     - family: AnekBangla
+    - family: HindSiliguri
       fonts:
         - asset: fonts/AnekBangla-Regular.ttf
         - asset: fonts/HindSiliguri-Medium.ttf

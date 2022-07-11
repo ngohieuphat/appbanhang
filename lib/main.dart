@@ -1,9 +1,15 @@
+import 'package:banhang/bloc/data_bloc.dart';
+import 'package:banhang/repository/repository.dart';
 import 'package:banhang/views/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(BlocProvider<DataBloc>(
+    create: (context) => DataBloc(Repo()),
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -16,11 +22,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-       
         primarySwatch: Colors.blue,
       ),
       home: HomePage(),
     );
   }
 }
-
