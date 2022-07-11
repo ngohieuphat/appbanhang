@@ -1,7 +1,7 @@
 import 'package:banhang/repository/repository.dart';
 import 'package:get/get.dart';
 
-//su ly api 
+//su ly api
 class Controller extends GetxController {
   var isLoading = true.obs;
   var groceryList = [].obs;
